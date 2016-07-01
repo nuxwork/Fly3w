@@ -100,11 +100,11 @@ require_once '_check.php';
                     </a>
                 </li>
 
-                <li>
+                <!-- <li>
                     <a href="node.php">
                         <i class="fa fa-sitemap"></i> <span>节点列表</span>
                     </a>
-                </li>
+                </li> -->
 
                 <li >
                     <a href="my.php">

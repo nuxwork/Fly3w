@@ -92,6 +92,18 @@ $unix_time = $oo->get_last_unix_time();
                     <div class="box box-solid">
                         <div class="box-header">
                             <h3 class="box-title">连接信息</h3>
+                                                                <ul class="nav nav-tabs pull-right">
+                                        <li class="dropdown">
+                                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                                操作 <span class="caret"></span>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li role="presentation"><a role="menuitem" target="_blank" tabindex="-1" href="node_json.php?id=<?php echo /*$row['id']*/1; ?>">配置文件</a></li>
+                                                <li role="presentation"><a role="menuitem" target="_blank" tabindex="-1" href="node_qr.php?id=<?php echo /*$row['id']*/1; ?>">二维码</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="pull-left header"><i class="fa fa-angle-right"></i> <?php echo $row['node_name']; ?></li>
+                                    </ul>
                         </div><!-- /.box-header -->
                         <div class="box-body">
                             <p> 端口：<code><?php echo $oo->get_port();?></code> </p>
