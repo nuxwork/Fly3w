@@ -8,6 +8,10 @@
     <link href="//fonts.lug.ustc.edu.cn/icon?family=Material+Icons" rel="stylesheet">
     <link href="asset/materialize/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="asset/materialize/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link rel="shortcut icon" href="asset/img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" href="asset/img/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="asset/img/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="asset/img/favicon/apple-touch-icon-114x114.png">
 </head>
 <body>
 <nav class="light-blue lighten-1" role="navigation">
