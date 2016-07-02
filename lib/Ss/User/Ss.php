@@ -119,7 +119,8 @@ class Ss {
     function add_expired($uid, $month){
         $expired = strtotime($this->get_expired());
         $expired = strtotime("+". $month ." Months", $expired);
-        $expired = date('Y-m-d', $expired);
+        $e = strtotime("+". $month ." Months");
+        $expired = date('Y-m-d', $expired > $e? $expired : $e);
 
         $this->db->update("user",[
             "expired" => $expired
