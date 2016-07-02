@@ -32,7 +32,14 @@ namespace Ss\Product;
         ]);
      }
 
-     function AllOrder($uid){
+     function AllOrder(){
+        $datas = $this->db->select($this->table,"*", [
+            "ORDER" => "create_time DESC"
+         ]);
+        return $datas;
+     }
+
+     function AllUserOrder($uid){
         $datas = $this->db->select($this->table,"*", [
             "user_id" => $uid,
             "ORDER" => "create_time DESC"
@@ -41,6 +48,14 @@ namespace Ss\Product;
      }
 
     function AllNotPaiedOrder($uid){
+        $datas = $this->db->select($this->table,"*", [
+            "status" => 0,
+            "ORDER" => "create_time DESC"
+         ]);
+        return $datas;
+     }
+
+    function AllUserNotPaiedOrder($uid){
         $datas = $this->db->select($this->table,"*", [
             "AND" => [
                 "user_id" => $uid,

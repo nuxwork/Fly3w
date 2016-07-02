@@ -118,6 +118,12 @@ require_once '_check.php';
                     </a>
                 </li>
 
+                <li>
+                    <a href="order.php">
+                        <i class="fa fa-users"></i> <span>订单管理</span>
+                    </a>
+                </li>
+
             </ul>
         </section>
         <!-- /.sidebar -->

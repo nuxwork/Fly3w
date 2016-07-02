@@ -31,6 +31,10 @@ class ProductInfo {
         return $this->ProductArray()['price'];
     }
 
+    function Duration(){
+        return $this->ProductArray()['duration'];
+    }
+
     function Description(){
         return $this->ProductArray()['description'];
     }

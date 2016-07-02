@@ -25,7 +25,7 @@ require_once '_main.php'; ?>
                             <p>邮箱：<?php echo $user_email; ?></p>
                             <p>套餐：<span class="label label-info"> <?php echo $oo->get_plan();?> </span> </p>
                             <p>账户余额：<?php echo $oo->get_money();?>元 </p>
-                            <p>套餐剩余：<?php echo $oo->get_money();?>元 </p>
+                            <p>到期时间：<?php echo $oo->get_expired();?> </p>
                             <!-- <p><a class="btn btn-danger btn-sm" href="kill.php">删除我的账户</a></p> -->
                         </div><!-- /.box -->
                     </div>

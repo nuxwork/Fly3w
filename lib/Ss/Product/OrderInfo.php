@@ -42,6 +42,11 @@ class OrderInfo {
         return $datas['0'];
     }
 
+
+    function GetPID(){
+        return $this->OrderArray()['p_id'];
+    }
+
     function Del(){
         $this->db->delete($this->table,[
             "id" => $this->id

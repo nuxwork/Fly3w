@@ -54,6 +54,10 @@ class Ss {
     function  get_money(){
         return $this->get_user_info_array()['money'];
     }
+    //get expired
+    function  get_expired(){
+        return $this->get_user_info_array()['expired'];
+    }
 
     //get unused traffic
     function unused_transfer(){
@@ -106,6 +110,19 @@ class Ss {
         $money = $this->get_money()+$money;
         $this->db->update("user",[
             "money" => $money
+        ],[
+            "uid" => $uid
+        ]);
+    }
+
+    //add expired
+    function add_expired($uid, $month){
+        $expired = strtotime($this->get_expired());
+        $expired = strtotime("+". $month ." Months", $expired);
+        $expired = date('Y-m-d', $expired);
+
+        $this->db->update("user",[
+            "expired" => $expired
         ],[
             "uid" => $uid
         ]);

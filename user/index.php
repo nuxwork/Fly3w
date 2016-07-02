@@ -39,19 +39,22 @@ $unix_time = $oo->get_last_unix_time();
             <!-- START PROGRESS BARS -->
             <div class="row">
                 <div class="col-md-6">
-                    <div class="box box-solid">
+                    <div class="box box-primary">
                         <div class="box-header">
                             <h3 class="box-title">公告&FAQ</h3>
                         </div><!-- /.box-header -->
                         <div class="box-body">
-                            <p>流量不会重置，可以通过签到获取流量。</p> 
-                            <p>流量可以通过签到获取，基本每天可以用1G流量。</p> 
+                            <li>新用户请加QQ群：<strong>365277357</strong></li>
+                            <li>本服务总人数控制在30以内，不以盈利为目的，仅提供稳定的上网环境</li> 
+                            <li>正常使用流量无上限，仅针对流量使用特别大的用户有限制</li> 
+                            <li>成员均来自熟人推荐，有任何问题找群主即可</li> 
+                            <li>支付采用微信扫码，支付后请通知群主</li> 
                         </div><!-- /.box-body -->
                     </div><!-- /.box -->
                 </div><!-- /.col (right) -->
 
                 <div class="col-md-6">
-                    <div class="box box-solid">
+                    <div class="box box-primary">
                         <div class="box-header">
                             <h3 class="box-title">流量使用情况</h3>
                         </div><!-- /.box-header -->
@@ -71,7 +74,7 @@ $unix_time = $oo->get_last_unix_time();
 
 
                 <div class="col-md-6">
-                    <div class="box box-solid">
+                    <div class="box box-primary">
                         <div class="box-header">
                             <h3 class="box-title">签到获取流量</h3>
                         </div><!-- /.box-header -->
@@ -89,7 +92,7 @@ $unix_time = $oo->get_last_unix_time();
                 </div><!-- /.col (right) -->
 
                 <div class="col-md-6">
-                    <div class="box box-solid">
+                    <div class="box box-primary">
                         <div class="box-header">
                             <h3 class="box-title">连接信息</h3>
                                                                 <ul class="nav nav-tabs pull-right">
