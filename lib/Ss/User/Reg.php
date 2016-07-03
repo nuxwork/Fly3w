@@ -26,6 +26,8 @@ class Reg {
     function Reg($username,$email,$pass,$plan,$transfer,$invite_num,$ref_by){
 
         $sspass = \Ss\Etc\Comm::get_random_char(8);
+        $expired = strtotime("+3 days");
+        $expired = date('Y-m-d', $expired);
 
         $this->db->insert($this->table,[
            "user_name" => $username,
@@ -41,7 +43,8 @@ class Reg {
             "invite_num" => $invite_num,
             "money" => '0',
             "#reg_date" =>  'NOW()',
-            "ref_by" => $ref_by
+            "ref_by" => $ref_by,
+            "expired" => $expired
         ]);
     }
 
