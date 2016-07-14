@@ -10,7 +10,7 @@ $code = $_POST['code'];
 
 $c = new \Ss\User\UserCheck();
 $code = new \Ss\User\InviteCode($code);
-if(!$code->IsCodeOk()){
+if($user_require_invite == 1 && !$code->IsCodeOk()){
     $a['msg'] = "邀请码无效";
 }elseif(!$c->IsEmailLegal($email)){
     $a['msg'] = "邮箱无效";

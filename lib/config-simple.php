@@ -51,6 +51,7 @@ $pwd_mode = 1;
 //都设置为0用户就不能邀请
 $user_invite_min = '1';
 $user_invite_max = '1';
+$user_require_invite = 1;
 
 
 //

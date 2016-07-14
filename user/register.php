@@ -47,11 +47,12 @@ require_once '../lib/config.php';
                 <input type="password" id="repasswd" class="form-control" placeholder="重复密码"/>
                 <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
             </div>
+	<?php if($user_require_invite == 1){ ?>
             <div class="form-group has-feedback">
                 <input type="text" id="code" class="form-control" placeholder="邀请码"/>
                 <span class="glyphicon glyphicon-send form-control-feedback"></span>
             </div>
-
+	<?php } ?>
 
             <div class="form-group has-feedback">
                <p>注册即代表同意<a href="tos.php">服务条款</a></p>
