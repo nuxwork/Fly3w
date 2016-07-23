@@ -5,12 +5,12 @@ $email = strtolower($email);
 $passwd = $_POST['passwd'];
 $name = $_POST['name'];
 $repasswd = $_POST['repasswd'];
-$agree = $_POST['agree'];
-$code = $_POST['code'];
+// $agree = $_POST['agree'];
+$code = $user_require_invite == 0? null : $_POST['code'];
 
 $c = new \Ss\User\UserCheck();
-$code = new \Ss\User\InviteCode($code);
-if($user_require_invite == 1 && !$code->IsCodeOk()){
+$code = $user_require_invite == 0? null : new \Ss\User\InviteCode($code);
+if($code != null && !$code->IsCodeOk()){
     $a['msg'] = "邀请码无效";
 }elseif(!$c->IsEmailLegal($email)){
     $a['msg'] = "邮箱无效";
@@ -26,7 +26,7 @@ if($user_require_invite == 1 && !$code->IsCodeOk()){
     $a['msg'] = "用户名已经被使用";
 }else{
     // get value
-    $ref_by = $code->GetCodeUser();
+    $ref_by = $code == null? '0' : $code->GetCodeUser();
     $passwd = \Ss\User\Comm::SsPW($passwd);
     $plan = "A";
     $transfer = $a_transfer;
@@ -34,7 +34,9 @@ if($user_require_invite == 1 && !$code->IsCodeOk()){
     //do reg
     $reg = new \Ss\User\Reg();
     $reg->Reg($name,$email,$passwd,$plan,$transfer,$invite_num,$ref_by);
-    $code->Del();
+    if($code != null){
+        $code->Del();
+    }
     $a['ok'] = '1';
     $a['msg'] = "注册成功";
 }

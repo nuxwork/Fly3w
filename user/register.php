@@ -108,8 +108,10 @@ require_once '../lib/config.php';
                     name: $("#name").val(),
                     passwd: $("#passwd").val(),
                     repasswd: $("#repasswd").val(),
-                    code: $("#code").val(),
-                    agree: $("#agree").val()
+                    agree: $("#agree").val(),
+                    <?php if($user_require_invite != 0) { ?>
+                    code: $("#code").val()
+                    <?php } ?>
                 },
                 success:function(data){
                     if(data.ok){
