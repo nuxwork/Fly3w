@@ -110,6 +110,7 @@ $unix_time = $oo->get_last_unix_time();
                                     </ul>
                         </div><!-- /.box-header -->
                         <div class="box-body">
+                            <p> 服务器地址：<code>s1.fly3w.com</code> </p>
                             <p> 端口：<code><?php echo $oo->get_port();?></code> </p>
                             <p> 密码：<?php echo $oo->get_pass();?> </p>
                             <p> 套餐：<span class="label label-info"> <?php echo $oo->get_plan();?> </span> </p>
